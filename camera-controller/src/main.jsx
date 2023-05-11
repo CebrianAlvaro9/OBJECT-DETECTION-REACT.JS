@@ -8,6 +8,7 @@ import "./index.css";
 import Root from "./routes/root";
 import Zoom from "./routes/zoom";
 import ErrorPage from "./error-page";
+import Auto from "./routes/auto";
 
 
 const router = createBrowserRouter([
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   },{
     path: "/zoom/:id",
     element: <Zoom />,
+    errorElement: <ErrorPage />,
+  },{
+    path: "/auto",
+    element: <Auto />,
     errorElement: <ErrorPage />,
   }
 ]);

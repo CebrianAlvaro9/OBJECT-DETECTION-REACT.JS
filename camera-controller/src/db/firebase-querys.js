@@ -1,5 +1,5 @@
 //function that parse the info from the database into an array
-import { collection, getDocs,getDoc, doc, updateDoc } from 'firebase/firestore/lite';
+import { collection, getDocs, getDoc, doc, updateDoc } from 'firebase/firestore/lite';
 import { db } from "../db/firebase-configuration";
 
 export async function queryCameras() {
@@ -20,19 +20,19 @@ export async function updateCamera(db, cameraId, newData) {
     await updateDoc(cameraRef, newData);
 }
 
-export async function cameraById( name) {
+export async function cameraById(name) {
     const docRef = doc(db, "cameras", name);
-  
+
     try {
         const docSnap = await getDoc(docRef);
-        if(docSnap.exists()) {
+        if (docSnap.exists()) {
             console.log(docSnap.data());
             return docSnap.data()
         } else {
             console.log("Document does not exist")
         }
-    
-    } catch(error) {
+
+    } catch (error) {
         console.log(error)
     }
 }

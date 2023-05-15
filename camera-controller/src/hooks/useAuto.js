@@ -10,7 +10,6 @@ export function useAuto( cameras){
     useEffect(() => {
         let interval;
         if(auto){
-      
           interval = setInterval(() => {
             setNumero((prevnumero) => (prevnumero + 1) % cameras.length);
           }, 5000);
@@ -18,8 +17,6 @@ export function useAuto( cameras){
     
         return () => clearInterval(interval);
       }, [auto, cameras.length]);
-
-
 
       function handleClick(){
         if(auto){

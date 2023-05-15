@@ -18,12 +18,10 @@ export function useOption(location) {
 
     const isFound = options.some(element => {
         if (element.url === location.pathname) {
-            console.log("dentro")
             return true;
         } else {
             return false;
         }
-
     });
 
     useEffect(() => {
@@ -32,9 +30,7 @@ export function useOption(location) {
         } else {
             setCol("grid-cols-4")
         }
-
         return () => {
-
         }
     }, [isFound])
 

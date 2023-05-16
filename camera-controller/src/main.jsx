@@ -11,6 +11,7 @@ import ErrorPage from "./error-page";
 import Auto from "./routes/auto";
 import Settings from "./routes/settings";
 import Test from "./routes/test";
+import { Detection } from "./routes/detection";
 
 
 
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
   ,{
     path: "/test",
     element: <Test />,
+    errorElement: <ErrorPage />,
+  },{
+    path: "/detection",
+    element: <Detection/> ,
     errorElement: <ErrorPage />,
   }
 ]);

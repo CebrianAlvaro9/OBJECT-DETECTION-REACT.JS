@@ -11,7 +11,7 @@ export function useOption(location) {
     const options = [
         { name: 'Home', url: '/' },
         { name: 'Auto', url: '/auto' },
-        { name: 'Detect', url: '/detect' },
+        { name: 'Detect', url: '/detection' },
         { name: 'settings', url: '/settings' },
     ];
 

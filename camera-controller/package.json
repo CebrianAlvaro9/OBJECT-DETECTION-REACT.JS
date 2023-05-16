@@ -10,6 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tensorflow-models/coco-ssd": "^2.2.2",
+    "@tensorflow/tfjs-backend-cpu": "^4.5.0",
+    "@tensorflow/tfjs-node": "^4.5.0",
+    "@tensorflow/tfjs-node-gpu": "^4.5.0",
     "firebase": "^9.21.0",
     "flowbite": "^1.6.5",
     "flowbite-react": "^0.4.4",

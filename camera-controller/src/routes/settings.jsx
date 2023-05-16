@@ -16,6 +16,7 @@ export default function Settings() {
 
     return (
         <>
+        
             {clickEdit ?
                 <FormCo id={id} camera={camera}  />
                 : <Table  handleClick={handleClick} />}

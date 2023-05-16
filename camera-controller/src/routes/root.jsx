@@ -11,12 +11,12 @@ export default function Root() {
     return (
         <>
         <div className="bg-transparent">
-            <h1 className="mb-4 text-3xl font-extrabold text-white dark:text-white md:text-5xl lg:text-6xl text-center"><span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Camera</span> Controller</h1>
+            <h1 className="mb-4 text-3xl font-extrabold text-black dark:text-white md:text-5xl lg:text-6xl text-center"><span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Controller</span> </h1>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
                 {cameras.map((camera) => (
                     <div key={camera.camera} >
                         <a href="#">
-                            <h5 className="p-5 mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">{camera.camera}</h5>
+                            <h5 className="p-5 mb-2 text-2xl font-bold tracking-tight text-black dark:text-white">{camera.camera}</h5>
                         </a>
                         <img className="h-auto max-w-full rounded-lg" src={camera.url} alt=""></img>
                         <div className="p-5">

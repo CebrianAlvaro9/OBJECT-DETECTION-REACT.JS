@@ -7,7 +7,7 @@ export function Table({handleClick}){
 
     return(
         <>
-        <h2>Settings</h2>
+        <h2 className="mb-4 text-2xl font-extrabold text-black dark:text-white md:text-5xl lg:text-6xl text-center"><span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Settings </span> </h2>
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">

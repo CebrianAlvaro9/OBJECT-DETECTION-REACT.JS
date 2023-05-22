@@ -8,8 +8,6 @@ import { useState, useEffect } from "react";
 import * as cocoSsd from '@tensorflow-models/coco-ssd';
 import { ZoomDetection } from '../components/zoomDetection';
 
-
-
 export function Detection() {
 
     const ID = "eFAy2nvVMdGbMHi2LhTq"
@@ -20,11 +18,8 @@ export function Detection() {
     const [modelLoaded, setModelLoaded] = useState(false);
     const [predictions, setPredictions] = useState([]);
 
-    console.log(modelLoaded);
-
-
+   
     //LOAD TENSORFLOWS MODULES
-
     useEffect(() => {
         cocoSsd.load().then((loadedModel) => {
             setModel(loadedModel);
@@ -34,14 +29,10 @@ export function Detection() {
     }, []);
 
     useEffect(() => {
-
         function predictWebcam() {
           if (modelLoaded) {
-    
             const video = document.getElementById("detection");
-    
             model.detect(video).then((newPredictions) => {
-    
               setPredictions(newPredictions);
             });
           }
@@ -88,14 +79,13 @@ export function Detection() {
             <>
                 <div className="bg-transparent">
                 <React.Fragment></React.Fragment>
-                    <ZoomDetection  camera={camera} />
+                    <ZoomDetection camera={camera} />
                     {predictionElements}
                 </div>
             </>
         )
     } else {
         return (
-
             <div className="container justify-center">
                 <h2 className="mb-4 text-xl font-extrabold text-black dark:text-white md:text-4xl lg:text-6xl text-center"><span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Loading Object Detection</span> </h2>
                 <div className="flex items-center justify-center mt-12 " role="status">
@@ -106,7 +96,6 @@ export function Detection() {
                     <span className="sr-only">Loading...</span>
                 </div>
             </div>
-
         )
     }
 }

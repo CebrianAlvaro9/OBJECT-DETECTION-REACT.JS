@@ -12,7 +12,7 @@ export function Zoom({ url}) {
             setZoom('h-screen w-screen')
             return (setClick(false))
         } else {
-            setZoom('h-96 ')
+            setZoom('h-96 mt-10')
             return (setClick(true))
         }
     }
@@ -20,11 +20,11 @@ export function Zoom({ url}) {
         <>
             {url &&
                 <div >
-                    {click && <h3 className="mb-4 text-xl font-extrabold text-black dark:text-white md:text-4xl lg:text-6xl text-center"><span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Object Detection</span> </h3>}
-                    <div className='flex justify-center w-screen'>
-                    <img id="detection"  onClick={handleClick} className={` ${zoom}`} src={url} alt="image description" />
+                   
+                    <div className='flex justify-center w-screen '>
+                    <img crossOrigin='anonymous' id="detection"  onClick={handleClick} className={` ${zoom}`} src={url} alt="image description" />
                     </div>
-                    {click && <a href='/'>Back</a>}
+                    {click && <a className='button text-white bg-gray-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/'>Back</a>}
 
                 </div>
             }

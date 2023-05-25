@@ -11,3 +11,5 @@ export function Zoom({ value }) {
     )
 
 }
+
+//important to have he crossOrigin= 'anonymous'

@@ -82,6 +82,7 @@ export function useForm(camera, id) {
         const cameraId = id;
         const newData = { camera: cameraName, url: cameraUrl };
         await updateCamera(db, cameraId, newData);
+         location.reload()
     };
 
     return [inputName, keyboard, cameraName, cameraUrl, layoutName, setInputName, onChangeAll, onKeyPress, handleCameraModify, onChangeInput, getInputValue]

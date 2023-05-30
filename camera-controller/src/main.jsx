@@ -12,6 +12,7 @@ import Auto from "./routes/auto";
 import Settings from "./routes/settings";
 import Test from "./routes/test";
 import { Detection } from "./routes/detection";
+import { Prueba } from "./components/prueba";
 
 
 
@@ -40,6 +41,11 @@ const router = createBrowserRouter([
   },{
     path: "/detection",
     element: <Detection/> ,
+    errorElement: <ErrorPage />,
+  }
+  ,{
+    path: "/prueba",
+    element: <Prueba/> ,
     errorElement: <ErrorPage />,
   }
 ]);
